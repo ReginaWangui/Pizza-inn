@@ -1,271 +1,336 @@
-body {
+/*******************************/
+/* Basic Setup */
+/*******************************/
+
+* {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  /* Add a black background color to the top navigation */
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
-    display: none;
-  }
-  /* sign in form */
-  /* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
+    padding: 0;
     box-sizing: border-box;
-  }
-  #size{
-      width:50%;
-      
-  }
-  /* Set a style for all buttons */
-  button {
-    background-color: tan;
-    color: teal;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: teal;
-    color: tan;
-  }
-  
-  /* Center the image and position the close button */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-  }
-  
- 
-  
-  .container {
-    padding: 16px;
-    width: 50%; 
-    margin-left: 100px;
-  }
-  
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: tan;
-    cursor: pointer;
-  }
-  
-  /* Add Zoom Animation */
-  .animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-  }
-  
-  @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-  }
-    
-  @keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-  }
-  
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-  }
+}
 
+html,
+body { 
+    background-color: #f4f4f4;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
 
-  /* sign in form */
-  /* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-  /* Add a background color when the inputs get focus */
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for all buttons */
-  button {
-    background-color: teal;
-    color: tan;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-  
-  button:hover {
-    opacity:1;
-  }
-  
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    padding: 14px 20px;
-    background-color: teal;
-    color: tan;
-  }
-  
-  /* Float cancel and signup buttons and add an equal width */
-  .cancelbtn, .signupbtn {
-    float: left;
-    width: 50%;
-  }
-  
-  /* Add padding to container elements */
-  .container {
-    padding: 16px;
-    width: 50%;
-    margin-left: 100px;
-  }
-  
-  /* The Modal (background) */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
-    padding-top: 50px;
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* Style the horizontal ruler */
-  hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-   
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #f1f1f1;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: teal;
-    cursor: pointer;
-  }
-  
-  /* Clear floats */
-  .clearfix::after {
-    content: "";
+.clear_Space {
+    zoom: 1;
+}
+.clear_Space::after {
+    content: '.';
     clear: both;
-    display: table;
-  }
-  
-  /* Change styles for cancel button and signup button on extra small screens */
-  @media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
-       width: 100%;
-    }
-  }
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*******************************/
+/* Reuseable Component */
+/*******************************/
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+
+.box {
+    padding: 1%;
+}
+
+
+/****** Marquee *********/
+
+marquee {
+    width: 50%;
+    color: #00e600;
+}
+
+#marquee2 {
+    background-color: #f4f4f4;
+}
+
+/****** Heading *********/
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: rgb(0, 247, 214);
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 120%;
+    font: bold;
+    margin-bottom: 15px;
+}
+
+h2::after {
+    display: block;
+    height: 2px;
+    background-color: #cf6d17;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+/****** Paragraph *********/
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+
+/****** Icons *********/
+
+.icon_big {
+    font-size: 350%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: red;
+    font-size: 120%;
+    margin-right: 10px;
+    
+    /*secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+
+/****** Buttons *********/
+
+.btn:link, 
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px; 
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.5s, border 0.5s, color 0.5s;
+}
+
+.btn-hangry:link,
+.btn-hangry:visited {
+    background-color: #97b900;
+    border: 1px solid #e67e22;
+    margin-right: 15px;
+}
+
+.btn-more:link,
+.btn-more:visited {
+    border: 1px solid #e67e22;
+    color: #00e0fd;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #00f08c;
+}
+
+.btn-hangry:hover,
+.btn-hangry:active {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.btn-more:hover,
+.btn-more:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+
+/*******************************/
+/* Header */
+/*******************************/
+
+/* Main nav ver */
+.main_nav {
+    float: right;
+    list-style: none;
+   
+    position: relative;
+}
+
+.main_nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main_nav li a:link,
+.main_nav li a:visited {    
+    color:teal;
+   
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    
+}
+
+.main_nav li a:hover,
+.main_nav li a:checked {
+    border-bottom: 2px solid #01f3fc;
+}
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+
+/*******************************/
+/* Meals */
+/*******************************/
+
+/* Display details img */
+#divIntro {
+    width: auto;
+    display: none;
+}
+
+#meals_title {
+    text-align: center;
+}
+
+.section-meals {
+    padding: 0;
+}
+
+.meals_row {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    margin-left: 70px;
+}
+
+.meal_col {
+    width: 33.33%;
+    float: left;
+    overflow: hidden;
+}
+
+
+/*******************************/
+/* Working Steps */
+/*******************************/
+
+.steps-box {
+    margin-top: 30px;
+}
+
+.step-box:first-child {
+    text-align: right;
+    padding-right: 3%;
+}
+
+.step-box:last-child {
+    text-align: left;
+    padding-left: 3%;
+    margin-top: 70px;
+}
+
+.phone {
+    width: 40%;
+}
+
+.work-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.work-step div {
+   color: red;
+   border: 2px solid black;
+   display: inline block;
+   border-radius: 50%;
+   height: 55px;
+   width: 55px;
+   text-align: center;
+   padding: 5px;
+   float: left;
+   font-size: 150%;
+   margin-right: 25px;
+}
+
+
+
+
+
+/*******************************/
+/* Top Reviews */
+/*******************************/
+
+.section-testimonials {
+    background-color: teal;
+    color: tan;
+    background-attachment: fixed;
+    background-position: center;
+   
+}
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 20%;
+    color:tan;
+    font-size: 120%;
+}
+
+blockquote::before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+   color: tan;
+}
