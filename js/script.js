@@ -32,3 +32,84 @@ function scrollFunction() {
     document.getElementById("go_btn").style.display = "none";
   }
 }
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+$(document).ready(function() {
+    $("#checkout").click(function() {
+        event.preventDefault();
+
+
+
+
+    var pizzaInput = $("#type").val();
+
+        pizzaSelect = new pizza(pizzaInput);
+        pizzaSelect.nameSize();
+        // alert(pizzaSelect.nameSize());
+
+    var sizeInput = $("#size").val();
+
+    var pizzaSize = new size(sizeInput);
+        pizzaSize.priceSize();
+        // alert(pizzaSize.priceSize());
+
+    var crustInput = $("#crust").val();
+    
+    var crustSize = new crust(crustInput);
+        crustSize.crustPrice();
+        // alert(crustSize.crustPrice());
+
+
+    var toppingInput = $("#toppings").val();
+
+    var toppingSize = new topping(toppingInput);
+        toppingSize.toppingPrice();
+        // alert(toppingSize.toppingPrice());
+
+
+    var quantityInput = $("quantity").val();
+
+    var  quantitySize = new quantity (quantityInput);
+         quantitySize.quantityPrice();
+        //  alert(quantitySize.quantityPrice());
+
+   // calcTotal to calculate the total pizza summation
+
+    var pizzaPrice = (parseInt(parseInt(pizzaSize.priceSize()) + parseInt(crustSize.crustPrice()) + parseInt(toppingSize.toppingPrice())));
+    $("#summation").append(pizzaPrice);
+
+    // S-size, C-crust, T-toppings N-name
+
+    var pizzaS = (pizzaSize.priceSize());
+    $("#psize").append(pizzaS);
+
+    var pizzaC = (crustSize.crustPrice());
+    $("#cprice").append(pizzaC);
+
+    var pizzaT = (toppingSize.toppingPrice());
+    $("#tprice").append(pizzaT);
+
+    var pizzaN = (pizzaSelect.nameSize());
+    $("#ptype").append(pizzaN);
+    event.preventDefault();
+    
+    });
+})

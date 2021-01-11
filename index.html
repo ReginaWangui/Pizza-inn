@@ -11,26 +11,54 @@
 <body>
 <div class="container">
    
-      <!--Header session-->
-      <header class="js_header">
+  <div class="topnav">
+    <a class="active" href="#index.html">Home</a>
+    <a href="checkout.html">placeOrder</a>
+    
+    <div class="login-container">
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
 
-  
-          <!--nav ver session-->
-          <nav>
-              <div class="row">
-                  <ul class="main_nav wow fadeInRight">
-                      <li><a href="#scrol_delivery">Food Delivery</a></li>
-                      <li><a href="#scrol_food">Our Foods</a></li>
-                      
-                  </ul> 
-              </div>
-          </nav>
-  
-       </header>
-  
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container-log">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+
+    </div>
+    
+  </div>
+  </div>
+
+<hr style="margin-top: 30px; width: 80%; margin-left: 100px;">
+
+
+  <div class="intro">
       
       <!--Features session-->
-      <section class="section-features clear_Space js--section-features"  id="scrol_delivery">
+      <div class="section-features clear_Space js--section-features"  id="scrol_delivery">
          
           <div class="row wow fadeInDown">
           <h2>Get food fast &mdash; Testy Fresh food</h2>
@@ -41,13 +69,13 @@
               So let us take care of that, we’re really good at it, we promise!
           </p>
           </div>
-  
-      
+        </div>
+        </div>
       <!--Meals session-->
       <section class="section-meals" id="scrol_food">
   
           <div>
-              <h2 class="wow zoomIn" id="meals_title">Our Fresh Food Items:</h2>
+              <h2 class="wow zoomIn" id="meals_title">Our Fresh Pizza Items:</h2>
           </div>
   
   
@@ -55,9 +83,17 @@
           <!--1, 2, 3 meals 1st row-->
           <div class="meals_row wow fadeInDown">
               
-              <div class="meal_col">                
+              <div class="meal_col">  
+
+<div class="card"  class="ih-item square colored effect8 scale_up">
+  <div class="img"><img src="img/pizza-recipe-1-500x500.jpg" alt="img" style="width: 300px; height: 300px;"></div>
+  <h3>Best Chicken Burgers</h3>
+  <p class="price">
+    <u>Price: 150tk / piece</u></p>
+  <p><button style="width: 150px; margin-left: 70px;">Add to Cart</button></p>
+</div>
               <!-- colored -->
-                  <div class="ih-item square colored effect8 scale_up"><a>
+                  <!-- <div class="ih-item square colored effect8 scale_up"><a>
                   <div class="img"><img src="img/pizza-recipe-1-500x500.jpg" alt="img" style="width: 300px; height: 300px;"></div>
                   <div class="info">
                   <h3>Best Chicken Burgers</h3>
@@ -65,13 +101,20 @@
                       <br/><br/>
                       <u>Price: 150tk / piece</u><br>
                   </p>
-                  </div></a></div>
+                  </div></a></div> -->
               <!-- end colored -->    
               </div>
   
               <div class="meal_col">                
               <!-- colored -->
-                  <div class="ih-item square colored effect4"><a>
+              <div class="card"  class="ih-item square colored effect4">
+                <div class="img"><img src="img/download (3).jpeg" alt="img" style="width: 300px; height: 300px;"></div>
+                <h3>Barbecue pizza</h3>                <p class="price">
+                  <u>Price: 90tk / Quarter piece</u>
+                <p><button style="width: 150px; margin-left: 70px;">Add to Cart</button></p>
+              </div>
+
+                  <!-- <div class="ih-item square colored effect4"><a>
                   <div class="img"><img src="img/download (3).jpeg" alt="img" style="width: 300px; height: 300px;"></div>
                   <div class="mask1"></div>
                   <div class="mask2"></div>
@@ -81,13 +124,23 @@
                       <br/><br/>
                       <u>Price: 90tk / Quarter piece</u><br>
                   </p>
-                  </div></a></div>
+                  </div></a></div> -->
               <!-- end colored -->    
               </div>
-                  
+                             
               <div class="meal_col">                
-              <!-- colored -->
-                  <div class="ih-item square colored effect8 scale_up"><a>
+                <!-- colored -->
+                <div class="card" class="ih-item square colored effect8 scale_up">
+                  <div class="img"><img src="img/images.jpeg" alt="img" style="width: 300px; height: 300px;"></div>
+                  <h3>Chicken Pizza</h3>
+                    <p class="price">
+                      <u>Size: (10.5in)</u>
+                      <u>Price: 750tk / piece</u>
+                  <p><button style="width: 150px; margin-left: 70px;">Add to Cart</button></p>
+                </div>
+  
+              
+                  <!-- <div class="ih-item square colored effect8 scale_up"><a>
                   <div class="img"><img src="img/images.jpeg" alt="img" style="width: 300px; height: 300px;"></div>
                   <div class="info">
                   <h3>Chicken Pizza</h3>
@@ -96,114 +149,88 @@
                       <u>Size: (10.5in)</u><br/><br/>
                       <u>Price: 750tk / piece</u><br>
                   </p>
-                  </div></a></div>
+                  </div></a></div> -->
               <!-- end colored -->    
               </div>
   
           </div>
-  
-  
-          <!--4, 5, 6 meals 2nd row-->
-          <div class="meals_row wow fadeInLeft">
-               
-          <div class="meal_col">                
-          <!-- colored -->
-              <div class="ih-item square effect4 colored"><a>
-              <div class="img"><img src="img/images.jpeg" alt="img" style="width: 300px; height: 300px;"></div>
-              <div class="mask1"></div>
-              <div class="mask2"></div>
-              <div class="info">
-              <h3>Chiken Noodle</h3>
-              <p>
-                  <br/><br/>
-                  <u>Price: 100tk / Per Plate</u><br>
-              </p>
-              </div></a></div>
-          <!-- end colored -->    
-          </div>
-  
-              <div class="meal_col">                
-                  <!-- colored -->
-                  <div class="ih-item square colored effect8 scale_up"><a>
-                  <div class="img"><img src="img/Pepperoni-Pizza_5-SQjpg.jpg" alt="img" style="width: 300px; height: 300px;"></div>
-                  <div class="info">
-                  <h3>Shrimp Noodle</h3>
-                  <p>
-                      <br/><br/>
-                      <u>Price: 120tk / Per Plate</u><br>
-                  </p>
-                  </div></a></div>
-              <!-- end colored -->    
-              </div>
-                  
-              <div class="meal_col">                
+
+          <div class="meals_row wow fadeInDown">
+              
+            <div class="meal_col">  
+
+<div class="card"  class="ih-item square colored effect8 scale_up">
+<div class="img"><img src="img/images (1).jpeg" alt="img" style="width: 300px; height: 300px;"></div>
+<h3>Best Chicken Burgers</h3>
+<p class="price">
+  <u>Price: 150tk / piece</u></p>
+<p><button style="width: 150px; margin-left: 70px;">Add to Cart</button></p>
+</div>
+            <!-- colored -->
+                <!-- <div class="ih-item square colored effect8 scale_up"><a>
+                <div class="img"><img src="img/pizza-recipe-1-500x500.jpg" alt="img" style="width: 300px; height: 300px;"></div>
+                <div class="info">
+                <h3>Best Chicken Burgers</h3>
+                <p>
+                    <br/><br/>
+                    <u>Price: 150tk / piece</u><br>
+                </p>
+                </div></a></div> -->
+            <!-- end colored -->    
+            </div>
+
+            <div class="meal_col">                
+            <!-- colored -->
+            <div class="card"  class="ih-item square colored effect4">
+              <div class="img"><img src="img/images (2).jpeg" alt="img" style="width: 300px; height: 300px;"></div>
+              <h3>Barbecue pizza</h3>                <p class="price">
+                <u>Price: 90tk / Quarter piece</u>
+              <p><button style="width: 150px; margin-left: 70px;">Add to Cart</button></p>
+            </div>
+
+                <!-- <div class="ih-item square colored effect4"><a>
+                <div class="img"><img src="img/download (3).jpeg" alt="img" style="width: 300px; height: 300px;"></div>
+                <div class="mask1"></div>
+                <div class="mask2"></div>
+                <div class="info">
+                <h3>Barbecue chicken</h3>
+                <p>
+                    <br/><br/>
+                    <u>Price: 90tk / Quarter piece</u><br>
+                </p>
+                </div></a></div> -->
+            <!-- end colored -->    
+            </div>
+                           
+            <div class="meal_col">                
               <!-- colored -->
-                  <div class="ih-item square colored effect4"><a>
-                  <div class="img"><img src="img/images (2).jpeg" alt="img" style="width: 300px; height: 300px;"></div>
-                  <div class="mask1"></div>
-                  <div class="mask2"></div>
-                  <div class="info">
-                  <h3>Barbecue Beef</h3>
-                  <p>
-                      <br/><br/>
-                      <u>Price: 100tk / Per piece</u><br>
-                  </p>
-                  </div></a></div>
-              <!-- end colored -->    
+              <div class="card" class="ih-item square colored effect8 scale_up">
+                <div class="img"><img src="img/pizza-recipe-1-500x500.jpg" alt="img" style="width: 300px; height: 300px;"></div>
+                <h3>Chicken Pizza</h3>
+                  <p class="price">
+                    <u>Size: (10.5in)</u>
+                    <u>Price: 750tk / piece</u>
+                <p><button style="width: 150px; margin-left: 70px;">Add to Cart</button></p>
               </div>
+
+            
+                <!-- <div class="ih-item square colored effect8 scale_up"><a>
+                <div class="img"><img src="img/images.jpeg" alt="img" style="width: 300px; height: 300px;"></div>
+                <div class="info">
+                <h3>Chicken Pizza</h3>
+                <p>
+                    <br/>
+                    <u>Size: (10.5in)</u><br/><br/>
+                    <u>Price: 750tk / piece</u><br>
+                </p>
+                </div></a></div> -->
+            <!-- end colored -->    
+            </div>
+
+        </div>
   
-          </div>
   
-  
-          <!--7, 8, 9 meals 3rd row-->
-          <div class="meals_row wow fadeInRight">
-  
-              <div class="meal_col">                
-              <!-- colored -->
-                  <div class="ih-item square colored effect8 scale_up"><a>
-                  <div class="img"><img src="img/images (1).jpeg" alt="img" style="width: 300px; height: 300px;"></div>
-                  <div class="info">
-                  <h3>কাচ্চি বিরিয়ানি : Kacchi Biriyani</h3>
-                  <p>
-                      <br/>
-                      <u>Kacchi, Chicken Roast & Borhani</u><br/><br/>
-                      <u>Price: 550tk / Per package</u><br>
-                  </p>
-                  </div></a></div>
-              <!-- end colored -->    
-              </div>
-  
-              <div class="meal_col">                
-                  <!-- colored -->
-                  <div class="ih-item square colored effect4"><a>
-                  <div class="img"><img src="img/download.jpeg" alt="img" style="width: 300px; height: 300px;"></div>
-                  <div class="mask1"></div>
-                  <div class="mask2"></div>
-                  <div class="info">
-                  <h3>Beef kala Vuna</h3>
-                  <p>
-                      <br/><br/>
-                      <u>Price: 120tk / Per Plate</u><br>
-                  </p>
-                  </div></a></div>
-              <!-- end colored -->    
-              </div>
-                  
-              <div class="meal_col">                
-                  <!-- colored -->
-                  <div class="ih-item square colored effect8 scale_up"><a>
-                  <div class="img"><img src="img/download (1).jpeg" alt="img" style="width: 300px; height: 300px;"></div>
-                  <div class="info">
-                  <h3>Fried chicken</h3>
-                  <p>
-                      <br/><br/>
-                      <u>Price: 130tk / 2 piece</u><br>
-                  </p>
-                  </div></a></div>
-              <!-- end colored -->    
-              </div>
-  
-          </div>
+          
   
       
       </section>
@@ -218,7 +245,6 @@
   
           <div class="row">
               <div class="col span_1_of_2 step-box">
-                  <img src="/resource/img/phone.png" class="phone wow fadeInLeft">
               </div>
   
               
