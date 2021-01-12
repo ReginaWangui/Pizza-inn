@@ -355,7 +355,6 @@ marquee {
 #marquee2 {
     background-color: #f4f4f4;
 }
-
 /****** Heading *********/
 
 h1,
@@ -379,6 +378,7 @@ h2 {
     text-align: center;
     margin-bottom: 30px;
     letter-spacing: 1px;
+    margin-left: 250px;
 }
 
 h3 {
@@ -659,14 +659,148 @@ cite {
     section {
         display: block;
     }
-    body {
-        margin: 0;
-        font-family: var(--bs-font-sans-serif);
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.5;
-        color: #212529;
-        background-color: #fff;
-        -webkit-text-size-adjust: 100%;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+   
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  .order a{
+      text-decoration: none;
+      list-style: none;
+      color: tan;
+
+  }
+  .order a:hover{
+      background-color: tan;
+      color: teal;
+  }
+
+  .btn {
+    background-color: teal;
+    color: tan;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color:tan;
+    color: teal;
+  }
+  
+  a {
+    color: #2196F3;
+  }
+  
+  hr {
+    border: 1px solid lightgrey;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
     }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
+  #whatWeOffer h1 {
+    font-weight: 900;
+    color: black;
+}
+#MakeYourOrder {
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+#MakeYourOrder h1 {
+    text-align: center;
+    font-weight: 900;
+    color: black;
+}
+
+grid-product__content {
+    position: relative;
+    text-align: left;
+}
+*, :after, :before, input {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -22px;
+}
+
+  
