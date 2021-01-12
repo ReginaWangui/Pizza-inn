@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PizaaInn</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/boostrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/boostrap.css">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="https://cdn.shopify.com/s/files/1/0264/6615/6634/t/9/assets/theme.css?v=18248538022312702160">
 </head>
@@ -17,34 +18,30 @@
     <a href="#checkout.html">placeOrder</a>
     
     <div class="login-container">
-      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
-
-<div id="id01" class="modal">
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+  
+  <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="/action_page.php">
-    <div class="container-log">
-      <h1>Sign Up</h1>
+  <form class="modal-content" action="https://github.us7.list-manage.com/subscribe/post?u=f76b3251c26682632b49d9ee5&amp;id=902cfc4325" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div class="container" >
+      
       <p>Please fill in this form to create an account.</p>
       <hr>
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
 
+        <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+    </label>
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="PASSWORD" id="mce-PASSWORD" required>
 
       <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-      
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
-
-      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
+      <input type="password" placeholder="Repeat Password" name="PASSWORD-REPEAT" id="mce-PASSWORD-REPEAT" required>
+    
       <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
+         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn" id="mc-embedded-submit">Sign Up</button>
       </div>
+      
     </div>
   </form>
 
@@ -53,10 +50,13 @@
   </div>
   </div>
 
-  <section id="MakeYourOrder">
-    <h1>ORDER WITH US</h1>
+ 
+
+
+<section id="MakeYourOrder" >
+
     <div id="orders" class="orders"><br><br>
-        <div class="container-fluid">
+        
             <div class="row">
                 <div class="col-md-5 p-2">
                     <h3 class="text-center text-white">PLace Your Orders</h3>
@@ -72,15 +72,15 @@
                         <option value="Veg Feast.">Veg Feast.</option>
                         <option value="Roast Veg & Feta.">Roast Veg & Feta.</option>
                         <option value="Spicy Boerewors.">Spicy Boerewors.</option>
-                    </select> <br>
+                    </select> 
                     <select class="form-control form-control-sm" id="size">
                         <option class="text-center">
-                            <h3><strong>Select Piece Size👨🏽‍🍳</strong></h3>
+                            <h3><strong>Select Piece Size👨🏽</strong></h3>
                         </option>
                         <option value="large">Large @Ksh.1,300</option>
                         <option value="medium">Medium @Ksh.950</option>
                         <option value="small">Small @Ksh.700</option>
-                    </select> <br>
+                    </select> 
                     <select class="form-control form-control-sm" id="crust">
                         <option class="text-center">
                             <h3> <strong>Select Crust</strong></h3>
@@ -88,7 +88,7 @@
                         <option value="cheese">Cheese-Stuffed Crust @Ksh.120 </option>
                         <option value="thin">Thin Crust @Ksh.80</option>
                         <option value="neapolitan">Neapolitan Crust @Ksh.140</option>
-                    </select><br>
+                    </select>
 
                     <select id="toppings" class="form-control form-control-sm">
                         <option value="default">Choose a prefferable topping</option>
@@ -100,7 +100,7 @@
                         <option value="Extra-cheese">Extra cheese. @Ksh50</option>
                         <option value="Black-olives">Black olives. @Ksh.25</option>
                         <option value="Green-peppers">Green peppers. @Ksh.10</option>
-                    </select><br>
+                    </select>
 
                     <div class="quantity">
                         <input value="" type="number" name="number" id="quantity"
@@ -108,51 +108,37 @@
                     </div><br><br>
                     &nbsp; &nbsp; &nbsp; <button type="submit" id="checkout" class="btn btn-success">Place
                         Order</button>
-                    &nbsp; &nbsp; &nbsp; <button type="reset" id="" class="btn btn-danger">Clear Order</button>
-
+                    <table class="table table-sm p-2">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="padding-left: 30px;">Pizza Type</th>
+                                <th scope="col" style="padding-left: 30px;"> Size </th>
+                                <th scope="col" style="padding-left: 30px;">Price</th>
+                                <th scope="col" style="padding-left: 30px;">Quantity</th>
+                                <th scope="col" style="padding-left: 30px;">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody style="margin-left:50px;">
+                            <tr >
+                                <td id="ptype" ></td>
+                                <td id="psize"></td>
+                                <td id="cprice"></td>
+                                <td id="tprice"></td>
+                                <td id="summation"></td>
+                            </tr>
+                        </tbody>
+                    </table><br>
+                    &nbsp; &nbsp; &nbsp; <button id="delivery" type="submit" class="btn btn-success">checkout</button>
+                   </div>
 
                 </div>
 
                 
-                <div class="container-fluid col-md-7 p-2 summation">
-                    <div class="container-fluid summarypreview p-2">
-                        <h5 class="text-white text-center">Total summation of your order.</h5>
-                        <table class="table table-sm p-2">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Size</th>
-                                    <th scope="col">Crust</th>
-                                    <th scope="col">Topping</th>
-                                    <th scope="col">Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td id="ptype"></td>
-                                    <td id="psize"></td>
-                                    <td id="cprice"></td>
-                                    <td id="tprice"></td>
-                                    <td id="summation"></td>
-                                </tr>
-                            </tbody>
-                        </table><br>
-                        <h6 class="delivery"><strong>For Deliveries</strong></h6>
-                        <button id="final" value="true" type="submit" class="btn btn-success">Checkout</button>
-                        <button id="delivery" type="submit" class="btn btn-success">Delivery</button>
-                    </div>
-                </div>
-            </div>
-        </div> <br>
-    </div> <br><br>
-</div> <br>
-
-<section id="footer">
-    
-</section>
-
-
        
+    </div> 
+</div> 
+
+
  
 
 
@@ -161,10 +147,12 @@
 </div>
 
 
-
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <script src="js/jquery-3.5.1.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/script.js"></script>
 
 </body>
 </html>
+
+
