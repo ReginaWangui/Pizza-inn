@@ -253,6 +253,7 @@ button:hover {
 .container-log {
   padding: 16px;
   width: 50%;
+  background-color: transparent;
   
 }
 
@@ -696,9 +697,9 @@ cite {
   }
   
   .container {
-    background-color: #f2f2f2;
-    padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
+    background-color:transparent;
+   padding: 10px;
+    margin-right: 200px;
     border-radius: 3px;
   }
   
@@ -770,37 +771,15 @@ cite {
       margin-bottom: 20px;
     }
   }
-  #whatWeOffer h1 {
-    font-weight: 900;
-    color: black;
-}
+
 #MakeYourOrder {
-    background: white;
+    background: transparent;
     padding: 0;
-    margin: 0;
+    margin-left: 150px;
 }
 #MakeYourOrder h1 {
     text-align: center;
     font-weight: 900;
     color: black;
 }
-
-grid-product__content {
-    position: relative;
-    text-align: left;
-}
-*, :after, :before, input {
-    box-sizing: border-box;
-}
-user agent stylesheet
-div {
-    display: block;
-}
-.grid {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-left: -22px;
-}
-
   
